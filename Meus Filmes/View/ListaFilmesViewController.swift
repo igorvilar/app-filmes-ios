@@ -10,6 +10,8 @@ import UIKit
 
 class ListaFilmesViewController: UIViewController {
 
+    @IBOutlet weak var filmesTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,4 +29,18 @@ class ListaFilmesViewController: UIViewController {
     }
     */
 
+}
+
+extension ListaFilmesViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        6
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FilmeTableViewCell", for: indexPath) as? FilmeTableViewCell
+        
+        return cell ?? UITableViewCell()
+    }
+    
+    
 }

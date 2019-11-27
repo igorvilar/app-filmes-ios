@@ -10,14 +10,60 @@
         <!--Meus Filmes-->
         <scene sceneID="rPs-2v-lY7">
             <objects>
-                <viewController title="Meus Filmes" id="Hw4-UW-96f" sceneMemberID="viewController">
+                <viewController title="Meus Filmes" id="Hw4-UW-96f" customClass="ListaFilmesViewController" customModule="Meus_Filmes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ggV-y6-TDc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cFE-0n-XnY">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FilmeTableViewCell" rowHeight="60" id="utQ-Co-8cg" customClass="FilmeTableViewCell" customModule="Meus_Filmes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="utQ-Co-8cg" id="gxu-eh-JGX">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome filme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0jf-Md-QXX">
+                                                    <rect key="frame" x="13" y="9" width="388" height="42"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="0jf-Md-QXX" secondAttribute="trailing" constant="13" id="JEg-pT-EH8"/>
+                                                <constraint firstItem="0jf-Md-QXX" firstAttribute="leading" secondItem="gxu-eh-JGX" secondAttribute="leading" constant="13" id="Jbo-zm-19H"/>
+                                                <constraint firstAttribute="bottom" secondItem="0jf-Md-QXX" secondAttribute="bottom" constant="9" id="WWC-JC-xLn"/>
+                                                <constraint firstItem="0jf-Md-QXX" firstAttribute="top" secondItem="gxu-eh-JGX" secondAttribute="top" constant="9" id="fzQ-BY-vuY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="tituloFilmeLabel" destination="0jf-Md-QXX" id="dQe-TH-gIT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Hw4-UW-96f" id="jqj-iI-Pwf"/>
+                                    <outlet property="delegate" destination="Hw4-UW-96f" id="ZVC-y2-DHw"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="cFE-0n-XnY" firstAttribute="top" secondItem="ZAJ-TA-Sho" secondAttribute="top" id="AY8-U2-MdY"/>
+                            <constraint firstItem="cFE-0n-XnY" firstAttribute="trailing" secondItem="ZAJ-TA-Sho" secondAttribute="trailing" id="UTo-qh-IGN"/>
+                            <constraint firstAttribute="bottom" secondItem="cFE-0n-XnY" secondAttribute="bottom" id="X33-E3-Uqj"/>
+                            <constraint firstItem="cFE-0n-XnY" firstAttribute="leading" secondItem="ZAJ-TA-Sho" secondAttribute="leading" id="sU9-nG-dKU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ZAJ-TA-Sho"/>
                     </view>
                     <navigationItem key="navigationItem" title="Meus Filmes" id="FNO-bH-Pfz"/>
+                    <connections>
+                        <outlet property="filmesTableView" destination="cFE-0n-XnY" id="rkt-0X-zwx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8lP-Pu-lih" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
