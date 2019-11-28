@@ -27,6 +27,7 @@
 		EA860639238F4D5A006DB15A /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA860638238F4D5A006DB15A /* Endpoint.swift */; };
 		EA86063B238F4E5B006DB15A /* ResponseFilme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86063A238F4E5B006DB15A /* ResponseFilme.swift */; };
 		EA86063D238F4F3D006DB15A /* Filme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA86063C238F4F3D006DB15A /* Filme.swift */; };
+		EA9C9730238F5DD200E8D51D /* SimpleAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9C972F238F5DD200E8D51D /* SimpleAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		EA860638238F4D5A006DB15A /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		EA86063A238F4E5B006DB15A /* ResponseFilme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseFilme.swift; sourceTree = "<group>"; };
 		EA86063C238F4F3D006DB15A /* Filme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filme.swift; sourceTree = "<group>"; };
+		EA9C972F238F5DD200E8D51D /* SimpleAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAlert.swift; sourceTree = "<group>"; };
 		EFB75419B458AB2F4163C848 /* Pods-Meus Filmes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meus Filmes.debug.xcconfig"; path = "Target Support Files/Pods-Meus Filmes/Pods-Meus Filmes.debug.xcconfig"; sourceTree = "<group>"; };
 		EFD11D57F5084EF574356DDC /* Pods-Meus Filmes-Meus FilmesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meus Filmes-Meus FilmesUITests.release.xcconfig"; path = "Target Support Files/Pods-Meus Filmes-Meus FilmesUITests/Pods-Meus Filmes-Meus FilmesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		F46907A282D36E5157ED6CF4 /* Pods-Meus Filmes-Meus FilmesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meus Filmes-Meus FilmesUITests.debug.xcconfig"; path = "Target Support Files/Pods-Meus Filmes-Meus FilmesUITests/Pods-Meus Filmes-Meus FilmesUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 		EA8605EA238E0B4D006DB15A /* Meus Filmes */ = {
 			isa = PBXGroup;
 			children = (
+				EA9C972E238F5DB500E8D51D /* UIComponents */,
 				EA86062D238F41DD006DB15A /* Resources */,
 				EA860620238E0D5A006DB15A /* Services */,
 				EA86061F238E0D4A006DB15A /* Repository */,
@@ -273,6 +276,14 @@
 				EA860638238F4D5A006DB15A /* Endpoint.swift */,
 			);
 			path = HTTPClient;
+			sourceTree = "<group>";
+		};
+		EA9C972E238F5DB500E8D51D /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				EA9C972F238F5DD200E8D51D /* SimpleAlert.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -521,6 +532,7 @@
 				EA860639238F4D5A006DB15A /* Endpoint.swift in Sources */,
 				EA860624238E0DDF006DB15A /* ListaFilmesViewController.swift in Sources */,
 				EA860637238F4BEF006DB15A /* FilmesRepository.swift in Sources */,
+				EA9C9730238F5DD200E8D51D /* SimpleAlert.swift in Sources */,
 				EA860635238F4B60006DB15A /* RequestManager.swift in Sources */,
 				EA86063B238F4E5B006DB15A /* ResponseFilme.swift in Sources */,
 				EA86063D238F4F3D006DB15A /* Filme.swift in Sources */,
