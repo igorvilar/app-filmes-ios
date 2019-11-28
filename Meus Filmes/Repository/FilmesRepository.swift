@@ -1,0 +1,21 @@
+//
+//  FilmesRepository.swift
+//  Meus Filmes
+//
+//  Created by Igor Vilar on 27/11/19.
+//  Copyright © 2019 Igor Vilar. All rights reserved.
+//
+
+import UIKit
+
+struct FilmesRepository{
+    
+    static let apiKey = "083a68c27ce0872e96bd304ee76e827a"
+    
+    static func listarContasCartao() -> Res<ResponseFilme> {
+        let url = Endpoint("/movie/popular")
+        return Res<ResponseFilme>(url)
+        .setQueryParams(["api_key": "\(apiKey)"]).get()
+
+    }
+}
