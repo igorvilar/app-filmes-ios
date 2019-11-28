@@ -7,11 +7,14 @@
 //
 
 import UIKit
-import MBProgressHUD
+import Imaginary
 
 class ListaFilmesViewController: UIViewController {
 
     @IBOutlet weak var filmesTableView: UITableView!
+    @IBOutlet weak var loadActivityIndicator:
+    
+    UIActivityIndicatorView!
     
     var filmes: [Filme] = []
     
@@ -34,6 +37,11 @@ class ListaFilmesViewController: UIViewController {
     */
     
     func setup() {
+        self.navigationController?.navigationBar.barTintColor = UIColor.black
+
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+
+        startLoad(start: true)
         FilmesRepository
             .listarFilmes()
             .onComplete { [weak self] (response) in
@@ -45,8 +53,20 @@ class ListaFilmesViewController: UIViewController {
                         }
                     }
                 }
-        }.catchError { (response) in
-            self.simpleAlert(title: "Alerta", message: response.error?.localizedDescription ?? "erro ao conectar", dismiss: false)
+                self?.startLoad(start: false)
+        }.catchError { [weak self] (response) in
+            self?.startLoad(start: false)
+            self?.simpleAlert(title: "Alerta", message: response.error?.localizedDescription ?? "erro ao conectar", dismiss: false)
+        }
+    }
+    
+    func startLoad (start: Bool) {
+        DispatchQueue.main.async {
+            if start {
+                self.loadActivityIndicator.startAnimating()
+            } else {
+                self.loadActivityIndicator.stopAnimating()
+            }
         }
     }
     
@@ -72,7 +92,11 @@ extension ListaFilmesViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FilmeTableViewCell", for: indexPath) as? FilmeTableViewCell
         cell?.tituloFilmeLabel.text = filmes[indexPath.row].title
-        
+        if let imagePath: String = filmes[indexPath.row].poster_path {
+            let placeholder = UIImage(named: "imageplaceholder")
+            let imageUrl = EndPointImagem(imagePath)
+            cell?.imageFilmeImageView.setImage(url: imageUrl, placeholder: placeholder)
+        }
         return cell ?? UITableViewCell()
     }
     

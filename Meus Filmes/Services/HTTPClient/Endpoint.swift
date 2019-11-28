@@ -8,6 +8,10 @@
 
 import UIKit
 
-func Endpoint(_ keyPath: String) -> URL {
+func EndpointApi(_ keyPath: String) -> URL {
     return URL(string: "http://api.themoviedb.org/3" + keyPath)!
+}
+
+func EndPointImagem(_ keyPath: String) -> URL {
+    return URL(string: "http://image.tmdb.org/t/p/w185/" + keyPath)!
 }

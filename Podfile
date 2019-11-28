@@ -8,7 +8,7 @@ target 'Meus Filmes' do
   # Pods for Meus Filmes
 
   pod 'lottie-ios'
-  pod 'MBProgressHUD'
+  pod 'Imaginary'
 
   target 'Meus FilmesTests' do
     inherit! :search_paths

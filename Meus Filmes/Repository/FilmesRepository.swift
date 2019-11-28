@@ -13,7 +13,7 @@ struct FilmesRepository{
     static let apiKey = "083a68c27ce0872e96bd304ee76e827a"
     
     static func listarFilmes() -> Response<ResponseFilme> {
-        let url = Endpoint("/movie/popular")
+        let url = EndpointApi("/movie/popular")
         return Response<ResponseFilme>(url)
         .setQueryParams(["api_key": "\(apiKey)"]).get()
 
