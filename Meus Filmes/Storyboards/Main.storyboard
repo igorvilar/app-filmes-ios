@@ -14,13 +14,31 @@
                     <view key="view" contentMode="scaleToFill" id="uwK-q7-gKN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="83C-U1-O4D" customClass="AnimationView" customModule="Lottie">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" red="0.8901960784313725" green="0.20392156862745098" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="animationName" value="video-cam"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="83C-U1-O4D" firstAttribute="trailing" secondItem="RbF-CE-0Xg" secondAttribute="trailing" id="RuU-lH-Acs"/>
+                            <constraint firstItem="83C-U1-O4D" firstAttribute="leading" secondItem="RbF-CE-0Xg" secondAttribute="leading" id="oaj-9I-iMP"/>
+                            <constraint firstAttribute="bottom" secondItem="83C-U1-O4D" secondAttribute="bottom" id="oam-ac-HXV"/>
+                            <constraint firstItem="83C-U1-O4D" firstAttribute="top" secondItem="uwK-q7-gKN" secondAttribute="top" id="zzk-4B-enT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="RbF-CE-0Xg"/>
                     </view>
+                    <connections>
+                        <outlet property="animationView" destination="83C-U1-O4D" id="gpS-HI-obc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jps-lq-7Df" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="84" y="50"/>
+            <point key="canvasLocation" x="82.608695652173921" y="49.553571428571423"/>
         </scene>
     </scenes>
 </document>
