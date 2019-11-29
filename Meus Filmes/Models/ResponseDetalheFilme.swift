@@ -9,7 +9,7 @@
 import UIKit
 class ResponseDetalheFilme: Codable {
     
-    var id: Int?
+    var id: Int64?
     var title: String?
     var overview: String?
     var poster_path: String?
