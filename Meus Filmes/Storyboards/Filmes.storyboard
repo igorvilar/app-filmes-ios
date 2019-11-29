@@ -99,11 +99,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Wf-3V-PEd">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6Wf-3V-PEd">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetalheFilmeTableViewCell" rowHeight="465" id="54b-6z-kSE" customClass="DetalheFilmeTableViewCell" customModule="Meus_Filmes" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="DetalheFilmeTableViewCell" rowHeight="465" id="54b-6z-kSE" customClass="DetalheFilmeTableViewCell" customModule="Meus_Filmes" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="465"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="54b-6z-kSE" id="ckL-bt-SdG">
@@ -176,6 +176,81 @@
                                             <outlet property="posterImageView" destination="wr2-ZZ-rGW" id="Gjm-f9-lZp"/>
                                             <outlet property="sinopseLabel" destination="0Z7-w5-EDj" id="s0x-j0-Ovh"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TituloComentarioTableViewCell" id="xcv-Zx-eBf" customClass="TituloComentarioTableViewCell" customModule="Meus_Filmes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="493" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xcv-Zx-eBf" id="FRb-96-zIE">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comentários" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FeW-Ub-ARm">
+                                                    <rect key="frame" x="46" y="11" width="322" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" red="0.89019607840000003" green="0.20392156859999999" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ComentarioTableViewCell" rowHeight="40" id="uQG-dF-Zmo" customClass="ComentarioTableViewCell" customModule="Meus_Filmes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="537" width="414" height="40"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uQG-dF-Zmo" id="ZzI-WR-G39">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oJq-Jd-OAE">
+                                                    <rect key="frame" x="10" y="11" width="384" height="17.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VQz-eT-Dhy">
+                                                    <rect key="frame" x="10" y="35" width="404" height="1"/>
+                                                    <color key="backgroundColor" red="0.89019607840000003" green="0.20392156859999999" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="UBN-oU-R4s"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="oJq-Jd-OAE" secondAttribute="bottom" constant="11.5" id="3tE-b8-i8d"/>
+                                                <constraint firstItem="VQz-eT-Dhy" firstAttribute="leading" secondItem="ZzI-WR-G39" secondAttribute="leading" constant="10" id="6j7-52-PyJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="VQz-eT-Dhy" secondAttribute="trailing" id="GA2-eo-8MO"/>
+                                                <constraint firstAttribute="trailing" secondItem="oJq-Jd-OAE" secondAttribute="trailing" constant="20" id="W2V-It-wHw"/>
+                                                <constraint firstAttribute="bottom" secondItem="VQz-eT-Dhy" secondAttribute="bottom" constant="4" id="am7-4J-Rgd"/>
+                                                <constraint firstItem="oJq-Jd-OAE" firstAttribute="top" secondItem="ZzI-WR-G39" secondAttribute="top" constant="11" id="gNi-74-qYU"/>
+                                                <constraint firstItem="oJq-Jd-OAE" firstAttribute="leading" secondItem="ZzI-WR-G39" secondAttribute="leading" constant="10" id="wu5-P4-flt"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="comentarioLabel" destination="oJq-Jd-OAE" id="T73-mF-e7t"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="BotaoComentarioTableViewCell" id="efF-N1-OOq" customClass="BotaoComentarioTableViewCell" customModule="Meus_Filmes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="577" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="efF-N1-OOq" id="gvI-wH-WFC">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comentar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hId-oo-gVL">
+                                                    <rect key="frame" x="20" y="11" width="374" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="hId-oo-gVL" secondAttribute="bottom" constant="10.5" id="2p2-uN-85j"/>
+                                                <constraint firstItem="hId-oo-gVL" firstAttribute="leading" secondItem="gvI-wH-WFC" secondAttribute="leading" constant="20" id="DQu-Z8-OKg"/>
+                                                <constraint firstItem="hId-oo-gVL" firstAttribute="top" secondItem="gvI-wH-WFC" secondAttribute="top" constant="11" id="iKN-XW-Yi7"/>
+                                                <constraint firstAttribute="trailing" secondItem="hId-oo-gVL" secondAttribute="trailing" constant="20" id="lIF-9x-gzW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.89019607840000003" green="0.20392156859999999" blue="0.1843137255" alpha="1" colorSpace="calibratedRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
