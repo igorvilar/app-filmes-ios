@@ -10,6 +10,11 @@
 		42FA18FE1CA9A5F828593762 /* Pods_Meus_Filmes_Meus_FilmesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC536BB64A8AB89D897AFF52 /* Pods_Meus_Filmes_Meus_FilmesUITests.framework */; };
 		AF97F96CE93F95F8010A1131 /* Pods_Meus_Filmes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DAA7E9C83E282B372A82EAE /* Pods_Meus_Filmes.framework */; };
 		D1C9061829EFD59893A130D8 /* Pods_Meus_FilmesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1357A4CFFDFF0239A997C114 /* Pods_Meus_FilmesTests.framework */; };
+		EA0706882390BEB300942365 /* ResponseDetalheFilme.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0706872390BEB300942365 /* ResponseDetalheFilme.swift */; };
+		EA07068A2390C03A00942365 /* Genres.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0706892390C03A00942365 /* Genres.swift */; };
+		EA07068E2390C25600942365 /* ViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA07068D2390C25600942365 /* ViewControler.swift */; };
+		EA56EF29239096DB0041A3D9 /* DetalheFilmeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA56EF28239096DB0041A3D9 /* DetalheFilmeViewController.swift */; };
+		EA56EF2B23909EFC0041A3D9 /* DetalheFilmeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA56EF2A23909EFC0041A3D9 /* DetalheFilmeTableViewCell.swift */; };
 		EA8605EC238E0B4D006DB15A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8605EB238E0B4D006DB15A /* AppDelegate.swift */; };
 		EA8605EE238E0B4D006DB15A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8605ED238E0B4D006DB15A /* SceneDelegate.swift */; };
 		EA8605F5238E0B50006DB15A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA8605F4238E0B50006DB15A /* Assets.xcassets */; };
@@ -54,6 +59,11 @@
 		4DAA7E9C83E282B372A82EAE /* Pods_Meus_Filmes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meus_Filmes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E0CAFDA8CFB898D0FA080D /* Pods-Meus FilmesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Meus FilmesTests.debug.xcconfig"; path = "Target Support Files/Pods-Meus FilmesTests/Pods-Meus FilmesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DC536BB64A8AB89D897AFF52 /* Pods_Meus_Filmes_Meus_FilmesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Meus_Filmes_Meus_FilmesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0706872390BEB300942365 /* ResponseDetalheFilme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseDetalheFilme.swift; sourceTree = "<group>"; };
+		EA0706892390C03A00942365 /* Genres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genres.swift; sourceTree = "<group>"; };
+		EA07068D2390C25600942365 /* ViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControler.swift; sourceTree = "<group>"; };
+		EA56EF28239096DB0041A3D9 /* DetalheFilmeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheFilmeViewController.swift; sourceTree = "<group>"; };
+		EA56EF2A23909EFC0041A3D9 /* DetalheFilmeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalheFilmeTableViewCell.swift; sourceTree = "<group>"; };
 		EA8605E8238E0B4D006DB15A /* Meus Filmes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meus Filmes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8605EB238E0B4D006DB15A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA8605ED238E0B4D006DB15A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -198,6 +208,8 @@
 			children = (
 				EA86063A238F4E5B006DB15A /* ResponseFilme.swift */,
 				EA86063C238F4F3D006DB15A /* Filme.swift */,
+				EA0706872390BEB300942365 /* ResponseDetalheFilme.swift */,
+				EA0706892390C03A00942365 /* Genres.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -205,6 +217,7 @@
 		EA86061C238E0D18006DB15A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				EA07068D2390C25600942365 /* ViewControler.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -223,8 +236,9 @@
 			isa = PBXGroup;
 			children = (
 				EA860626238E0F30006DB15A /* Cell */,
-				EA860623238E0DDF006DB15A /* ListaFilmesViewController.swift */,
 				EA86062B238F409D006DB15A /* SplashViewController.swift */,
+				EA860623238E0DDF006DB15A /* ListaFilmesViewController.swift */,
+				EA56EF28239096DB0041A3D9 /* DetalheFilmeViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -249,6 +263,7 @@
 			isa = PBXGroup;
 			children = (
 				EA860627238E0F44006DB15A /* FilmeTableViewCell.swift */,
+				EA56EF2A23909EFC0041A3D9 /* DetalheFilmeTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -530,11 +545,16 @@
 				EA8605EC238E0B4D006DB15A /* AppDelegate.swift in Sources */,
 				EA8605EE238E0B4D006DB15A /* SceneDelegate.swift in Sources */,
 				EA860639238F4D5A006DB15A /* Endpoint.swift in Sources */,
+				EA56EF2B23909EFC0041A3D9 /* DetalheFilmeTableViewCell.swift in Sources */,
 				EA860624238E0DDF006DB15A /* ListaFilmesViewController.swift in Sources */,
 				EA860637238F4BEF006DB15A /* FilmesRepository.swift in Sources */,
+				EA07068A2390C03A00942365 /* Genres.swift in Sources */,
+				EA07068E2390C25600942365 /* ViewControler.swift in Sources */,
+				EA0706882390BEB300942365 /* ResponseDetalheFilme.swift in Sources */,
 				EA9C9730238F5DD200E8D51D /* SimpleAlert.swift in Sources */,
 				EA860635238F4B60006DB15A /* RequestManager.swift in Sources */,
 				EA86063B238F4E5B006DB15A /* ResponseFilme.swift in Sources */,
+				EA56EF29239096DB0041A3D9 /* DetalheFilmeViewController.swift in Sources */,
 				EA86063D238F4F3D006DB15A /* Filme.swift in Sources */,
 				EA860628238E0F44006DB15A /* FilmeTableViewCell.swift in Sources */,
 				EA86062C238F409D006DB15A /* SplashViewController.swift in Sources */,

@@ -26,22 +26,28 @@ class ListaFilmesViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "filmesToDetalhesSegue" {
+            if let destino = segue.destination as? DetalheFilmeViewController {
+                let indexPath = sender as! IndexPath
+                destino.filme = filmes[indexPath.row]
+            }
+        }
     }
-    */
     
     func setup() {
         self.navigationController?.navigationBar.barTintColor = UIColor.black
 
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
 
-        startLoad(start: true)
+        loadActivityIndicator.startLoad(start: true)
         FilmesRepository
             .listarFilmes()
             .onComplete { [weak self] (response) in
@@ -53,34 +59,12 @@ class ListaFilmesViewController: UIViewController {
                         }
                     }
                 }
-                self?.startLoad(start: false)
+                self?.loadActivityIndicator.startLoad(start: false)
         }.catchError { [weak self] (response) in
-            self?.startLoad(start: false)
+            self?.loadActivityIndicator.startLoad(start: false)
             self?.simpleAlert(title: "Alerta", message: response.error?.localizedDescription ?? "erro ao conectar", dismiss: false)
         }
     }
-    
-    func startLoad (start: Bool) {
-        DispatchQueue.main.async {
-            if start {
-                self.loadActivityIndicator.startAnimating()
-            } else {
-                self.loadActivityIndicator.stopAnimating()
-            }
-        }
-    }
-    
-    func simpleAlert(title: String, message: String, dismiss: Bool, completion: (() -> Void)? = nil) {
-           DispatchQueue.main.async {
-               let alert = SimpleAlert.alertWithTitle(title, andMessage: message, withCompletion: { _ in
-                   if (dismiss) {
-                       self.dismiss(animated: true, completion: nil)
-                   }
-                   completion?()
-               })
-               SimpleAlert.show(alert, onView: self)
-           }
-       }
 
 }
 
@@ -100,5 +84,7 @@ extension ListaFilmesViewController: UITableViewDelegate, UITableViewDataSource 
         return cell ?? UITableViewCell()
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "filmesToDetalhesSegue", sender: indexPath)
+    }
 }

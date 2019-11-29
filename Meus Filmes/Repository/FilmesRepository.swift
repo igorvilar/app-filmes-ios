@@ -18,4 +18,10 @@ struct FilmesRepository{
         .setQueryParams(["api_key": "\(apiKey)"]).get()
 
     }
+    
+    static func detalharFilme(idFilme: Int64) -> Response<ResponseDetalheFilme> {
+        let url = EndpointApi("/movie/\(String(idFilme))")
+        return Response<ResponseDetalheFilme>(url)
+               .setQueryParams(["api_key": "\(apiKey)"]).get()
+    }
 }
